@@ -1,0 +1,18 @@
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li {
+    background-color: #0056B3;
+    height: 115px;
+    display: flex;
+}
+
+nav ul li a {
+    padding: 43px 44px;
+    color: white;
+}
