@@ -11,12 +11,13 @@
 body {
     display: flex;
     background-color: #fff;
-    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
 
 #root {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
