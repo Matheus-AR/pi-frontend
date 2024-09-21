@@ -1,0 +1,19 @@
+.item-avaliacao {
+    margin-top: 38px;
+    margin-bottom: 10px;
+    width: 991px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 28px;
+    background-color: #66B2FF;
+}
+
+.item-avaliacao img {
+    width: 132px;
+    height: 123px;
+}
+
+.item-avaliacao .descricao {
+    padding-top: 18px;
+}
