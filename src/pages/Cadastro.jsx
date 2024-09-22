@@ -10,7 +10,8 @@ function Cadastro() {
             <Input tipo="text" id="nome" texto="Nome" />
             <Input tipo="email" id="email" texto="E-mail" />
             <Input tipo="password" id="senha" texto="Senha" />
-            <Botao texto="Entrar" />
+            <Botao texto="Criar" />
+            <Botao texto="Voltar" />
         </main>
     )
 }

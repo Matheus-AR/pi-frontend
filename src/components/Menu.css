@@ -1,18 +1,45 @@
+nav {
+    width: 100%;
+}
 nav ul {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: stretch;
     list-style: none;
-    gap: 15px;
 }
 
 nav ul li {
-    background-color: #0056B3;
     display: flex;
+    justify-content: center;
+    background-color: #007BFF;
 }
 
 nav ul li a {
-    padding: 38px 44px;
-    width: 159px;
-    color: white;
+    color: #fff;
+    width: 100%;
     text-align: center;
+    border-bottom: 0.5px solid gray;
+}
+
+@media screen and (min-width: 1024px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        gap: 15px;
+    }
+    
+    nav ul li {
+        background-color: #0056B3;
+        display: flex;
+    }
+    
+    nav ul li a {
+        padding: 38px 44px;
+        width: 159px;
+        color: white;
+        text-align: center;
+    }
 }

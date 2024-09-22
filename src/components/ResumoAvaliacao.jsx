@@ -4,10 +4,10 @@ function ResumoAvaliacao(props) {
     return (
         <>
             <div className="item-avaliacao">
-                <img src="" alt="" />
+                <img src="" alt="Imagem da Avaliação" />
                 <div className="descricao">
                     <h2>{props.titulo}</h2>
-                    <p>{props.decricao}</p>
+                    <p>{props.descricao}</p>
                 </div>
             </div>
         </>

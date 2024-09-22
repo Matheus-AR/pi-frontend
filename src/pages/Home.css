@@ -1,9 +1,17 @@
 .conteudo-container {
-    flex: 1;
-    margin-top: 30px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .conteudo-container {
+        margin-top: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

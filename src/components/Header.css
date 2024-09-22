@@ -1,5 +1,15 @@
 header {
-    background-color: #007BFF;
+    position: sticky;
+    top: 0;
     width: 100%;
-    min-height: 100px;
+    background-color: #007BFF;
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #007BFF;
+        min-height: 100px;
+    }
 }

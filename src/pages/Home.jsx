@@ -10,10 +10,14 @@ function Home() {
             <Header />
             <div className="conteudo-container">
                 <InputPesquisar />
-                <ResumoAvaliacao titulo="Avaliação 1" descricao="Descrição da avaliação"  />
-                <ResumoAvaliacao titulo="Avaliação 2" descricao="Descrição da avaliação"  />
-                <ResumoAvaliacao titulo="Avaliação 3" descricao="Descrição da avaliação"  />
-                <ResumoAvaliacao titulo="Avaliação 4" descricao="Descrição da avaliação"  />
+                <section className="lista-avaliacoes">
+                    <ResumoAvaliacao titulo="Avaliação 1" descricao="Descrição da avaliação"  />
+                    <ResumoAvaliacao titulo="Avaliação 2" descricao="Descrição da avaliação"  />
+                    <ResumoAvaliacao titulo="Avaliação 3" descricao="Descrição da avaliação"  />
+                    <ResumoAvaliacao titulo="Avaliação 4" descricao="Descrição da avaliação"  />
+                    <ResumoAvaliacao titulo="Avaliação 5" descricao="Descrição da avaliação"  />
+                    <ResumoAvaliacao titulo="Avaliação 6" descricao="Descrição da avaliação"  />
+                </section>
             </div>
 
             <Footer texto="Copyright (C) 2024" />
