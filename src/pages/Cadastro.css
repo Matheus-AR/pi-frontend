@@ -10,18 +10,18 @@
     color: #fff;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .cadastro-container {
         margin: 0 auto;
-        padding: 0 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 611px;
-        height: 691px;
+        width: 90%;
+        height: 90%;
         border-radius: 70px;
-        background-color: #66B2FF;
-        color: #fff;
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cadastro-container {
+        width: 50%;
     }
 }

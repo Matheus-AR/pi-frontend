@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 
 function App() {
-  const index = 3;
+  const index = 1;
   return (
     <>
       {index == 1 && <Login />}
