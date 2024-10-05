@@ -1,16 +1,13 @@
 import Botao from "../components/Botao";
-import Input from "../components/Input";
 import Titulo from "../components/Titulo";
 import "./Cadastro.css";
+import FormCadastro from "./FormCadastro";
 
 function Cadastro() {
     return (
         <main className="cadastro-container">
             <Titulo texto="Cadastro" />
-            <Input tipo="text" id="nome" texto="Nome" />
-            <Input tipo="email" id="email" texto="E-mail" />
-            <Input tipo="password" id="senha" texto="Senha" />
-            <Botao texto="Criar" />
+            <FormCadastro />
             <Botao texto="Voltar" />
         </main>
     )

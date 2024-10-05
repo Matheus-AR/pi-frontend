@@ -1,8 +1,8 @@
 import "./Link.css";
-
+import { NavLink } from "react-router-dom";
 function Link(props) {
     return (
-        <a href="#">{props.texto}</a>
+        <NavLink to={props.url}>{props.texto}</NavLink>
     )
 }
 
