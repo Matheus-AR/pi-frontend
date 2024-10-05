@@ -7,7 +7,7 @@ function InputNome(props) {
     return (
         <>
             <input type="text" placeholder="Nome" {...props.register("nome", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            {props.error && <p className="error">{props.error.message}</p>}
         </>
     )
 }

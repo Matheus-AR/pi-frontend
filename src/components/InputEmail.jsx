@@ -11,7 +11,7 @@ function InputEmail(props) {
     return (
         <>
             <input type="email" placeholder="E-mail" {...props.register("email", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            {props.error && <p className="error">{props.error.message}</p>}
         </>
     )
 }

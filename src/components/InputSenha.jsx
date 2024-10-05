@@ -9,7 +9,7 @@ function InputSenha(props) {
   return (
     <>
       <input type="password" placeholder="Senha" {...props.register("senha", regras)} />
-      {props.error && <p>{props.error.message}</p>}
+      {props.error && <p className="error">{props.error.message}</p>}
     </>
   );
 }

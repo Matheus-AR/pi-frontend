@@ -5,7 +5,7 @@ function InputConfirmaSenha(props) {
     return (
         <>
             <input type="password" placeholder="Confirme a senha" {...props.register("confirmasenha", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            {props.error && <p className="error">{props.error.message}</p>}
         </>
     )
 }
