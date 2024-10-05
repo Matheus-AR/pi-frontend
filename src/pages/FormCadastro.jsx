@@ -23,7 +23,7 @@ function FormCadastro() {
             <InputEmail register={register} error={errors.email} />
             <InputSenha register={register} error={errors.senha} />
             <InputConfirmaSenha register={register} error={errors.confirmasenha} senha={campoSenha} />
-            <Botao texto="Criar" />
+            <Botao tipo="submit" texto="Criar" />
         </form>
     )
 }

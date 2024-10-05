@@ -8,7 +8,7 @@ function Cadastro() {
         <main className="cadastro-container">
             <Titulo texto="Cadastro" />
             <FormCadastro />
-            <Botao texto="Voltar" />
+            <Botao tipo="button" texto="Voltar" />
         </main>
     )
 }

@@ -2,7 +2,7 @@ import "./Botao.css"
 
 function Botao(props) {
     return (
-        <input type="submit" value={props.texto} />
+        <input type={props.tipo} value={props.texto} />
     )
 } 
 
