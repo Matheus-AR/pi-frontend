@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import EsqueciSenha from "./pages/EsqueciSenha";
+import Avaliacao from "./pages/Avaliacao";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
             <Route index element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
-            <Route path="/avaliacao" element={<h1>AVALIAÇÃO</h1>} />
+            <Route path="/avaliacao" element={<Avaliacao />} />
             <Route path="/perfil" element={<h1>Perfll</h1>} />
             <Route path="/esqueci" element={<EsqueciSenha />} />
             <Route path="*" element={<h1>Página não encontrada!</h1>} />
