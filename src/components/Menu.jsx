@@ -6,7 +6,7 @@ function Menu() {
     return (
         <nav>
             <ul>
-                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/home">Home</NavLink></li>
                 <li><NavLink to="/avaliacao">Avaliação</NavLink></li>
                 <li><NavLink to="/perfil">Perfil</NavLink></li>
             </ul>

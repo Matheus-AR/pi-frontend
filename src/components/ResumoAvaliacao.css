@@ -11,28 +11,31 @@
     background-color: #66B2FF;
 }
 
-.item-avaliacao img {
-    width: 40px;
-    height: 40px;
-}
-
 .item-avaliacao .descricao {
     padding-top: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .item-avaliacao {
+        width: 40em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-avaliacao .descricao {
+        padding-top: 18px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .item-avaliacao {
         width: 40em;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 28px;
         background-color: #66B2FF;
-    }
-    
-    .item-avaliacao img {
-        width: 132px;
-        height: 123px;
     }
     
     .item-avaliacao .descricao {

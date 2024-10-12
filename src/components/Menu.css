@@ -22,6 +22,27 @@ nav ul li a {
     border-bottom: 0.5px solid gray;
 }
 
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        gap: 15px;
+    }
+    
+    nav ul li {
+        background-color: #0056B3;
+        display: flex;
+    }
+    
+    nav ul li a {
+        padding: 20px 5px;
+        width: 159px;
+        color: white;
+        text-align: center;
+    }
+}
 @media screen and (min-width: 1024px) {
     nav ul {
         display: flex;
