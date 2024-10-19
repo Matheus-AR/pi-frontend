@@ -1,29 +1,60 @@
 .perfil-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 120px;
+    gap: 16px;
+    margin-top: 400px;
 }
 
-.perfil-container input[type="button"] {
-    width: 25%;
-}
 .perfil-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .perfil-section form {
+    background-color: #66B2FF;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    padding: 0 36px;
-    background-color: #66B2FF;
-    border-radius: 70px;
-    width: 558px;
-    height: 413px;
+    padding: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .perfil-container {
+        align-items: center;
+        margin-top: 450px;
+    }
+
+    .perfil-section form {
+        border-radius: 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .perfil-container {
+        margin-top: 180px;
+    }
+    
+    .perfil-container input[type="button"] {
+        width: 25%;
+    }
+    .perfil-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0 24px;
+    }
+    
+    .perfil-section form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 36px;
+        background-color: #66B2FF;
+        height: 413px;
+    }    
 }

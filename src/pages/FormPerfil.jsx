@@ -21,7 +21,7 @@ function FormPerfil() {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Titulo2 texto="Editar Perfil" />
-            <InputNome register={register} error={errors.nome} />
+            <InputNome texto="Nome" register={register} error={errors.nome} />
             <InputEmail register={register} error={errors.email} />
             <InputSenha register={register} error={errors.senha} />
             <InputConfirmaSenha register={register} error={errors.confirmasenha} senha={campoSenha} />
