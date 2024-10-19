@@ -1,0 +1,29 @@
+.criarAvalicao-container {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.criarAvalicao-container form {
+    background-color: #66B2FF;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .criarAvalicao-container form {
+        height: 20rem;
+        width: 50%;
+        justify-content: space-around;
+        border-radius: 70px;
+    }
+}

@@ -19,7 +19,7 @@ function FormCadastro() {
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <InputNome register={register} error={errors.nome} />
+            <InputNome texto="Nome" register={register} error={errors.nome} />
             <InputEmail register={register} error={errors.email} />
             <InputSenha register={register} error={errors.senha} />
             <InputConfirmaSenha register={register} error={errors.confirmasenha} senha={campoSenha} />
