@@ -21,9 +21,8 @@
 @media screen and (min-width: 1024px) {
     
     .criarAvalicao-container form {
-        height: 20rem;
+        height: 24rem;
         width: 50%;
-        justify-content: space-around;
         border-radius: 70px;
     }
 }

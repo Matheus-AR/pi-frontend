@@ -1,21 +1,8 @@
-.conteudo-container {
-    margin-top: 32px;
+.home-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 150px;
-}
-
-
-@media screen and (min-width: 768px) {
-    .conteudo-container {
-        margin-top: 200px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .conteudo-container {
-        margin-top: 250px;
-    }
+    margin-top: 32px;
 }

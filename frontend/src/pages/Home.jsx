@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <Header />
-            <div className="conteudo-container">
+            <div className="home-container">
                 <InputPesquisar />
                 <ListaAvaliacao />
             </div>
