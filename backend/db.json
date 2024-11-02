@@ -1,3 +1,19 @@
 {
-    "avaliacoes": []
+  "avaliacoes": [
+    {
+      "id": "7636",
+      "nome": "Bola da Nike",
+      "descricao": "A bola é muito boa"
+    },
+    {
+      "id": "8a53",
+      "nome": "Makita serra circular",
+      "descricao": "Ferramenta muito boa para trabalho pesado"
+    },
+    {
+      "id": "2f81",
+      "nome": "XBOX",
+      "descricao": "Video game muito legal"
+    }
+  ]
 }

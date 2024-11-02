@@ -3,13 +3,14 @@
     flex-direction: column;
     flex: 1;
     gap: 16px;
-    margin-top: 490px;
+    margin-top: 30px;
 }
 
 .perfil-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
 }
 
 .perfil-section form {
@@ -21,21 +22,39 @@
     width: 100%;
 }
 
+.aviso-avaliacao {
+    color: #fff;
+    background-color: #66B2FF;
+    margin-bottom: 12px;
+}
+
 @media screen and (min-width: 768px) {
     .perfil-container {
+        margin-top: 120px;
         align-items: center;
-        margin-top: 520px;
+        justify-content: center;
+    }
+
+    .perfil-section {
+        gap: 60px;
     }
 
     .perfil-section form {
         border-radius: 70px;
+    }
+
+    .aviso-avaliacao {
+        font-size: 32px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        padding: 12px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .perfil-container {
         justify-content: center;
-        margin-top: 260px;
+        margin-top: 360px;
     }
     
     .perfil-container input[type="button"] {
@@ -58,5 +77,9 @@
         padding: 0 36px;
         background-color: #66B2FF;
         height: 413px;
-    }    
+    }
+
+    .aviso-avaliacao {
+        font-size: 32px;
+    }
 }

@@ -1,18 +1,14 @@
 import ResumoAvaliacao from "../components/ResumoAvaliacao";
 import "./ListaAvaliacao.css";
 
-function ListaAvaliacao() {
-    const resumos = [
-        {titulo: "Avaliação 1", descricao: "Descricao 1"},
-        {titulo: "Avaliação 2", descricao: "Descrição 2"},
-        {titulo: "Avaliação 3", descricao: "Descrição 3"}
-    ]
+function ListaAvaliacao(props) {
+    
     return (
         <>
             <ul className="lista-avaliacoes">
-                {resumos.map((item, index) => (
+                {props.itens.map((item, index) => (
                     <li key={index}>
-                        <ResumoAvaliacao titulo={item.titulo} descricao={item.descricao} />
+                        <ResumoAvaliacao nome={item.nome} descricao={item.descricao} navega={props.navega} />
                     </li>
                 ))}
             </ul>

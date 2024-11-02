@@ -3,9 +3,9 @@ import "./ResumoAvaliacao.css";
 function ResumoAvaliacao(props) {
     return (
         <>
-            <div className="item-avaliacao">
+            <div className="item-avaliacao" onClick={() => props.navega()}>
                 <div className="descricao">
-                    <h2>{props.titulo}</h2>
+                    <h2>{props.nome}</h2>
                     <p>{props.descricao}</p>
                 </div>
             </div>
