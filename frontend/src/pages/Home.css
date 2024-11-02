@@ -4,5 +4,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 90px;
+}
+
+@media screen and (min-width: 1024px) {
+    .home-container {
+        margin-top: 180px;
+    }
 }
