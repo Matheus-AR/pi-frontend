@@ -1,19 +1,8 @@
 import axios from "axios";
 
-const url = `${import.meta.env.VITE_URL_API}/avaliacoes`;
+const url = `${import.meta.env.VITE_URL_API}/usuarios`;
 
-function buscarAvaliacoes() {
-  return axios
-    .get(url)
-    .then((response) => {
-      return { sucesso: true, dados: response.data };
-    })
-    .catch(() => {
-      return { sucesso: false, mensagem: `Ocorreu um erro!` };
-    });
-}
-
-function buscarUmaAvaliacao(id) {
+function buscarUsuario(id) {
   return axios
     .get(`${url}/${id}`)
     .then((response) => {
@@ -24,9 +13,9 @@ function buscarUmaAvaliacao(id) {
     });
 }
 
-function criarAvaliacao(avaliacao) {
+function criarUsuario(usuario) {
   return axios
-    .post(url, avaliacao)
+    .post(url, usuario)
     .then((response) => {
       return { sucesso: true, dados: response.data };
     })
@@ -35,4 +24,19 @@ function criarAvaliacao(avaliacao) {
     });
 }
 
-export { buscarAvaliacoes, buscarUmaAvaliacao, criarAvaliacao };
+function atualizarUsuario(usuario) {
+  return axios
+    .put(`${url}/${usuario.id}`, {
+      nome: usuario.nome,
+      email: usuario.email,
+      senha: usuario.senha,
+    })
+    .then((response) => {
+      return { sucesso: true, dados: response.data };
+    })
+    .catch(() => {
+      return { sucesso: false, mensagem: "Ocorreu um erro!" };
+    });
+}
+
+export { buscarUsuario, criarUsuario, atualizarUsuario };

@@ -35,7 +35,9 @@ function Perfil() {
     <>
       <Header />
       <div className="perfil-container">
-        <NavLink className="btn-criarAvaliacao" to="/criaravaliacao">Criar Avaliação</NavLink>
+        <NavLink className="btn-criarAvaliacao" to="/criaravaliacao">
+          Criar Avaliação
+        </NavLink>
         <section className="perfil-section">
           <FormPerfil />
           {console.log(avaliacoes)}
