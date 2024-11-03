@@ -8,7 +8,7 @@ function ListaAvaliacao(props) {
             <ul className="lista-avaliacoes">
                 {props.itens.map((item, index) => (
                     <li key={index}>
-                        <ResumoAvaliacao nome={item.nome} descricao={item.descricao} navega={props.navega} />
+                        <ResumoAvaliacao id={item.id} nome={item.nome} descricao={item.descricao} navega={props.navega(item.id)} />
                     </li>
                 ))}
             </ul>

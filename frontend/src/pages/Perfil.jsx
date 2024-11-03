@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
-import Botao from "../components/Botao";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import FormPerfil from "./FormPerfil";
@@ -11,8 +10,8 @@ import { buscarAvaliacoes } from "../services/AvalicaoService";
 
 function Perfil() {
   const navigate = useNavigate();
-  const navega = () => {
-    navigate("/criaravaliacao");
+  const navegaAvaliacao = (id) => {
+    navigate(`/avaliacao/${id}`);
   };
 
   const [avaliacoes, setAvaliacoes] = useState([]);
@@ -36,14 +35,17 @@ function Perfil() {
     <>
       <Header />
       <div className="perfil-container">
-        <Botao tipo="button" texto="Criar avaliação" onClick={navega} />
+        <NavLink className="btn-criarAvaliacao" to="/criaravaliacao">Criar Avaliação</NavLink>
         <section className="perfil-section">
           <FormPerfil />
           {console.log(avaliacoes)}
           {avaliacoes.length ? (
             <>
               {erro && <p>{erro}</p>}
-              <ListaAvaliacao itens={avaliacoes} />
+              <ListaAvaliacao
+                itens={avaliacoes}
+                navega={() => navegaAvaliacao}
+              />
             </>
           ) : (
             <p className="aviso-avaliacao">Nenhuma avaliação!</p>

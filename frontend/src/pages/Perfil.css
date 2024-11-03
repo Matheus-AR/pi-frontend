@@ -3,7 +3,7 @@
     flex-direction: column;
     flex: 1;
     gap: 16px;
-    margin-top: 30px;
+    margin-top: 400px;
 }
 
 .perfil-section {
@@ -28,9 +28,21 @@
     margin-bottom: 12px;
 }
 
+.btn-criarAvaliacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0056B3;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 70px;
+    border-style: none;
+}
+
 @media screen and (min-width: 768px) {
     .perfil-container {
-        margin-top: 120px;
+        margin-top: 520px;
         align-items: center;
         justify-content: center;
     }
@@ -48,6 +60,11 @@
         margin-bottom: 12px;
         border-radius: 10px;
         padding: 12px;
+    }
+
+    .btn-criarAvaliacao {
+        width: 50%;
+        height: 50px;
     }
 }
 
@@ -81,5 +98,9 @@
 
     .aviso-avaliacao {
         font-size: 32px;
+    }
+
+    .btn-criarAvaliacao {
+        font-size: 25px;
     }
 }

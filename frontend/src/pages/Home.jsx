@@ -6,43 +6,43 @@ import Header from "../components/Header";
 import InputPesquisar from "../components/InputPesquisar";
 import "./Home.css";
 import ListaAvaliacao from "./ListaAvaliacao";
-import {buscarAvaliacoes} from "../services/AvalicaoService";
+import { buscarAvaliacoes } from "../services/AvalicaoService";
 
 function Home() {
-    const [avaliacoes, setAvaliacoes] = useState([]);
-    const [erro, setErro] = useState("");
+  const [avaliacoes, setAvaliacoes] = useState([]);
+  const [erro, setErro] = useState("");
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const carregar = async () => {
-        const resposta = await buscarAvaliacoes();
-        if (resposta.sucesso) {
-            setAvaliacoes(resposta.dados);
-            setErro("");
-        } else {
-            setErro(resposta.mensagem);
-        }
-    };
-
-    const navega = () => {
-        navigate("/avaliacao");
+  const carregar = async () => {
+    const resposta = await buscarAvaliacoes();
+    if (resposta.sucesso) {
+      setAvaliacoes(resposta.dados);
+      setErro("");
+    } else {
+      setErro(resposta.mensagem);
     }
+  };
 
-    useEffect(() => {
-        carregar();
-    }, []);
-    return (
-        <>
-            <Header />
-            <div className="home-container">
-                <InputPesquisar />
-                {erro && <p className="error">{erro}</p>}
-                <ListaAvaliacao itens={avaliacoes} navega={navega} />
-            </div>
+  const navega = (id) => {
+    navigate(`/avaliacao/${id}`);
+  };
 
-            <Footer texto="Copyright (C) 2024" />
-        </>
-    )
+  useEffect(() => {
+    carregar();
+  }, []);
+  return (
+    <>
+      <Header />
+      <div className="home-container">
+        <InputPesquisar />
+        {erro && <p className="error">{erro}</p>}
+        <ListaAvaliacao itens={avaliacoes} navega={() => navega} />
+      </div>
+
+      <Footer texto="Copyright (C) 2024" />
+    </>
+  );
 }
 
 export default Home;
