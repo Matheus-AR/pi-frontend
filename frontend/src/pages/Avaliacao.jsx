@@ -30,6 +30,7 @@ function Avaliacao() {
     <>
       <Header />
       <div className="conteudo-avaliacao">
+        {erro && <p className="error">{erro}</p>}
         <InfoAvaliacao
           nome={avaliacao.nome}
           autor={avaliacao.autor}
