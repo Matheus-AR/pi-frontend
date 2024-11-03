@@ -1,19 +1,45 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoAvaliacao from "../components/InfoAvaliacao";
 import "./Avaliacao.css";
+import { buscarUmaAvaliacao } from "../services/AvalicaoService";
 
 function Avaliacao() {
-    return (
-        <>
-            <Header />
-            <div className="conteudo-avaliacao">
-                <InfoAvaliacao nome="Produto 1" autor="Autor 1" descricao="Descrição do produto" />
-            </div>
+  const { id } = useParams();
+  const [avaliacao, setAvaliacao] = useState({});
+  const [erro, setErro] = useState("");
 
-            <Footer texto="Copyright (C) 2024" />
-        </>
-    )
+  const carregar = async (id) => {
+    const resposta = await buscarUmaAvaliacao(id);
+    if (resposta.sucesso) {
+      setAvaliacao(resposta.dados);
+      setErro("");
+    } else {
+      setErro(resposta.mensagem);
+    }
+  };
+
+  useEffect(() => {
+    carregar(id);
+  }, [id]);
+  console.log(avaliacao);
+  return (
+    <>
+      <Header />
+      <div className="conteudo-avaliacao">
+        <InfoAvaliacao
+          nome={avaliacao.nome}
+          autor={avaliacao.autor}
+          descricao={avaliacao.descricao}
+        />
+      </div>
+
+      <Footer texto="Copyright (C) 2024" />
+    </>
+  );
 }
 
 export default Avaliacao;

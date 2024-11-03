@@ -13,7 +13,8 @@ function buscarAvaliacoes() {
     });
 }
 
-function buscarUmaAvaliaca(id) {
+function buscarUmaAvaliacao(id) {
+  console.log("Avaliacao Service: ", id);
   return axios
     .get(`${url}/${id}`)
     .then((response) => {
@@ -35,4 +36,4 @@ function criarAvaliacao(avaliacao) {
     });
 }
 
-export { buscarAvaliacoes, buscarUmaAvaliaca, criarAvaliacao };
+export { buscarAvaliacoes, buscarUmaAvaliacao, criarAvaliacao };
