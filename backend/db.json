@@ -21,12 +21,5 @@
       "descricao": "Bom para trabalho escritório, mas ruim para desenvolvimento!"
     }
   ],
-  "usuarios": [
-    {
-      "id": "c6c8",
-      "nome": "Matheus Araujo",
-      "email": "matheus@email.com",
-      "senha": "ndjwRWE483few#@GW"
-    }
-  ]
+  "users": []
 }
