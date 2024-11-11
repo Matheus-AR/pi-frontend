@@ -5,13 +5,11 @@ import Botao from "../components/Botao";
 import InputNome from "../components/InputNome";
 import InputEmail from "../components/InputEmail";
 import InputSenha from "../components/InputSenha";
-import InputConfirmaSenha from "../components/InputConfirmaSenha";
 import Titulo2 from "../components/Titulo2";
 
 function FormPerfil() {
     const navigate = useNavigate();
-    const {register, handleSubmit, watch, formState: {errors}} = useForm();
-    const campoSenha = watch('senha');
+    const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = (data) => {
         const { senha, confirmasenha} = data;
         if (senha === confirmasenha) {
@@ -24,7 +22,6 @@ function FormPerfil() {
             <InputNome texto="Nome" register={register} error={errors.nome} />
             <InputEmail register={register} error={errors.email} />
             <InputSenha register={register} error={errors.senha} />
-            <InputConfirmaSenha register={register} error={errors.confirmasenha} senha={campoSenha} />
             <Botao tipo="submit" texto="Salvar" />
         </form>
     )
