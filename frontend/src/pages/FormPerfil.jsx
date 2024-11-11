@@ -10,11 +10,8 @@ import Titulo2 from "../components/Titulo2";
 function FormPerfil() {
     const navigate = useNavigate();
     const {register, handleSubmit, formState: {errors}} = useForm();
-    const onSubmit = (data) => {
-        const { senha, confirmasenha} = data;
-        if (senha === confirmasenha) {
-            navigate("/perfil");
-        }
+    const onSubmit = () => {
+        navigate("/perfil");
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
