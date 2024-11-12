@@ -40,7 +40,6 @@ function Perfil() {
         </NavLink>
         <section className="perfil-section">
           <FormPerfil />
-          {console.log(avaliacoes)}
           {avaliacoes.length ? (
             <>
               {erro && <p>{erro}</p>}

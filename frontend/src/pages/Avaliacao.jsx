@@ -25,7 +25,6 @@ function Avaliacao() {
   useEffect(() => {
     carregar(id);
   }, [id]);
-  console.log(avaliacao);
   return (
     <>
       <Header />
