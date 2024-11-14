@@ -12,7 +12,7 @@ function FormCadastro(props) {
     formState: { errors },
   } = useForm({ values: props.dados });
   return (
-    <form onSubmit={handleSubmit(props.enviar)}>
+    <form onSubmit={handleSubmit(props.onEnviar)}>
       <InputNome texto="Nome" register={register} error={errors.nome} />
       <InputEmail register={register} error={errors.email} />
       <InputSenha register={register} error={errors.senha} />

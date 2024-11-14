@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./Cadastro.css";
 import Botao from "../components/Botao";
 import Titulo from "../components/Titulo";
-import "./Cadastro.css";
 import FormCadastro from "./FormCadastro";
-import { criarUsuario } from "../services/UsuarioService";
+import { AuthContext } from "../contexts/AuthContext";
 
 function Cadastro() {
   const navigate = useNavigate();
-  const [erro, setErro] = useState("");
-  const criarNovoUsuario = async (dados) => {
-    const resposta = await criarUsuario(dados);
-    if (resposta.sucesso) {
-        setErro("");
-        navigate("/");
+  const { registrar } = useContext(AuthContext);
+  const [msg, setMsg] = useState("");
+
+  const onEnviar = async (dados) => {
+    setMsg("");
+    const erro = await registrar(dados);
+    if (erro) {
+      setMsg("");
     } else {
-        setErro(resposta.mensagem);
+      navigate("/");
     }
   };
   const voltar = () => {
@@ -25,8 +27,8 @@ function Cadastro() {
   return (
     <main className="cadastro-container">
       <Titulo texto="Cadastro" />
-      {erro && <p className="error">{erro}</p>}
-      <FormCadastro dados={{}} enviar={criarNovoUsuario} />
+      {msg && <p className="error">{msg}</p>}
+      <FormCadastro dados={{}} onEnviar={onEnviar} />
       <Botao tipo="button" texto="Voltar" onClick={voltar} />
     </main>
   );

@@ -12,7 +12,7 @@ function FormCriarAvaliacao(props) {
     formState: { errors },
   } = useForm({ values: props.dados });
   return (
-    <form onSubmit={handleSubmit(props.trataEnviar)}>
+    <form onSubmit={handleSubmit(props.onSalvar)}>
       <Titulo2 texto="Criar Avaliação" />
       <InputNome
         texto="Nome do produto"

@@ -24,6 +24,17 @@ function buscarUmaAvaliacao(id) {
     });
 }
 
+function buscarPorAutor(autor) {
+  return axios
+    .get(`${url}?autor=${autor}`)
+    .then((response) => {
+      return { sucesso: true, dados: response.data };
+    })
+    .catch((error) => {
+      return { sucesso: false, mensagem: error.message };
+    });
+}
+
 function criarAvaliacao(avaliacao) {
   return axios
     .post(url, avaliacao)
@@ -35,4 +46,4 @@ function criarAvaliacao(avaliacao) {
     });
 }
 
-export { buscarAvaliacoes, buscarUmaAvaliacao, criarAvaliacao };
+export { buscarAvaliacoes, buscarUmaAvaliacao, criarAvaliacao, buscarPorAutor };
