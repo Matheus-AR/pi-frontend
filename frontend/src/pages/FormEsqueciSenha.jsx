@@ -9,6 +9,7 @@ function FormEsqueciSenha() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = () => {
+        alert("E-mail enviado! Olhe sua caixa de mensagens!");
         navigate("/");
     }
     return (
