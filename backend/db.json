@@ -1,4 +1,17 @@
 {
   "avaliacoes": [],
-  "users": []
+  "users": [
+    {
+      "email": "matheus@gmail.com",
+      "password": "$2a$10$fwn7pKmWWPYCY9voQ3fPe.iRBnxIYxswDwsMSYzwbRRCRUMrMWgMq",
+      "nome": "Matheus",
+      "id": 1
+    },
+    {
+      "email": "maria@gmail.com",
+      "password": "$2a$10$q.azVRcXp./SW5hTE9WqTOcL2PmkxFrx9kYg/ijWEK9zZJvGK/o6e",
+      "nome": "Maria",
+      "id": 2
+    }
+  ]
 }

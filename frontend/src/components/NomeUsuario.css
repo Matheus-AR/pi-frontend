@@ -1,0 +1,26 @@
+.nome-usuario {
+    color: #fff;
+    margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .nome-usuario {
+        position: absolute;
+        color: #fff;
+        margin: 18px;
+        font-size: 22px;
+        font-weight: bold
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .nome-usuario {
+        position: absolute;
+        color: #fff;
+        margin: 30px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+}
