@@ -1,15 +1,18 @@
 import { useContext } from "react";
-import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 import Menu from "./Menu";
 import NomeUsuario from "./NomeUsuario";
 import { AuthContext } from "../contexts/AuthContext";
 import BotaoSair from "./BotaoSair";
+import "./Header.css";
 
 function Header() {
     const {usuario, logout} = useContext(AuthContext);
+    const navigate = useNavigate();
     const onSair = async () => {
         await logout();
+        navigate("/");
     }
     return (
         <header>
