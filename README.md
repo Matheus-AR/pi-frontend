@@ -47,7 +47,12 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
     ```bash
     npm install
 
-3. Executar o frontend:
+3. Criar um arquivo .env na raiz da pasta frontend com a url do backend:
+
+    ```
+    VITE_URL_API = http://localhost:3000
+
+4. Executar o frontend:
 
     ```bash
     npm run dev
